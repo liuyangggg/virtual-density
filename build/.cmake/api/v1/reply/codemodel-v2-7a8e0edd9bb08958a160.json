@@ -1,0 +1,119 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Apps/3DPhaseSeparate",
+					"jsonFile" : "directory-Apps.3DPhaseSeparate-Release-73c60ece0a246c5d3988.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Apps/3DPhaseSeparate",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "Tests/FieldBlock",
+					"jsonFile" : "directory-Tests.FieldBlock-Release-eceb08fb7a9e2cc360a8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.18"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Tests/FieldBlock",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "MPLB",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "FieldBlockMpiDev::@e7ec5cdaceaffb6d1a7a",
+					"jsonFile" : "target-FieldBlockMpiDev-Release-0690a8227b9526a78cc0.json",
+					"name" : "FieldBlockMpiDev",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "FieldBlockSeqDev::@e7ec5cdaceaffb6d1a7a",
+					"jsonFile" : "target-FieldBlockSeqDev-Release-0a09889942b4ee0a2efd.json",
+					"name" : "FieldBlockSeqDev",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "PhaseSeparate3DMpiDev::@147a557b4bb169ce161e",
+					"jsonFile" : "target-PhaseSeparate3DMpiDev-Release-963adcf94421794c96a3.json",
+					"name" : "PhaseSeparate3DMpiDev",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "PhaseSeparate3DSeqDev::@147a557b4bb169ce161e",
+					"jsonFile" : "target-PhaseSeparate3DSeqDev-Release-d358fd711a4f0b66839b.json",
+					"name" : "PhaseSeparate3DSeqDev",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lyyyylbm/mplb/build",
+		"source" : "/home/lyyyylbm/mplb"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

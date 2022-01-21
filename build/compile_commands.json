@@ -1,0 +1,142 @@
+[
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/evolution.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/evolution.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/evolution.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/flowfield.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/flowfield.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/flowfield.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/model_wrapper.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/model.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/scheme.cpp.o -c /home/lyyyylbm/mplb/Src/scheme.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/scheme.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/scheme_wrapper.cpp.o -c /home/lyyyylbm/mplb/Src/scheme_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/scheme_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/configuration.cpp.o -c /home/lyyyylbm/mplb/Src/configuration.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/configuration.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/block.cpp.o -c /home/lyyyylbm/mplb/Src/block.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/block.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/flowfield_wrapper.cpp.o -c /home/lyyyylbm/mplb/Src/flowfield_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/flowfield_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/boundary.cpp.o -c /home/lyyyylbm/mplb/Src/boundary.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/boundary.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/__/__/Src/boundary_wrapper.cpp.o -c /home/lyyyylbm/mplb/Src/boundary_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/boundary_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DSeqDev.dir/lbm3d_PhaseSeparate.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/lbm3d_PhaseSeparate.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/lbm3d_PhaseSeparate.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/evolution.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/evolution.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/evolution.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/flowfield.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/flowfield.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/flowfield.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/model_wrapper.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/model.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/model.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/scheme.cpp.o -c /home/lyyyylbm/mplb/Src/scheme.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/scheme.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/scheme_wrapper.cpp.o -c /home/lyyyylbm/mplb/Src/scheme_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/scheme_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/configuration.cpp.o -c /home/lyyyylbm/mplb/Src/configuration.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/configuration.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/block.cpp.o -c /home/lyyyylbm/mplb/Src/block.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/block.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/flowfield_wrapper.cpp.o -c /home/lyyyylbm/mplb/Src/flowfield_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/flowfield_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/boundary.cpp.o -c /home/lyyyylbm/mplb/Src/boundary.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/boundary.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/__/__/Src/boundary_wrapper.cpp.o -c /home/lyyyylbm/mplb/Src/boundary_wrapper.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/boundary_wrapper.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Apps/3DPhaseSeparate",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Apps/3DPhaseSeparate -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/PhaseSeparate3DMpiDev.dir/lbm3d_PhaseSeparate.cpp.o -c /home/lyyyylbm/mplb/Apps/3DPhaseSeparate/lbm3d_PhaseSeparate.cpp",
+  "file": "/home/lyyyylbm/mplb/Apps/3DPhaseSeparate/lbm3d_PhaseSeparate.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Tests/FieldBlock",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Tests/FieldBlock -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/FieldBlockSeqDev.dir/__/__/Src/block.cpp.o -c /home/lyyyylbm/mplb/Src/block.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/block.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Tests/FieldBlock",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Tests/FieldBlock -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/FieldBlockSeqDev.dir/field_block.cpp.o -c /home/lyyyylbm/mplb/Tests/FieldBlock/field_block.cpp",
+  "file": "/home/lyyyylbm/mplb/Tests/FieldBlock/field_block.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Tests/FieldBlock",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Tests/FieldBlock -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/FieldBlockMpiDev.dir/__/__/Src/block.cpp.o -c /home/lyyyylbm/mplb/Src/block.cpp",
+  "file": "/home/lyyyylbm/mplb/Src/block.cpp"
+},
+{
+  "directory": "/home/lyyyylbm/mplb/build/Tests/FieldBlock",
+  "command": "/bin/x86_64-linux-gnu-g++-9 -DCPU -DLEVEL=DebugLevel=0 -DOPS_3D -DOPS_MPI -I/home/lyyyylbm/mplb/Src -I/home/lyyyylbm/mplb/Tests/FieldBlock -isystem /usr/include/hdf5/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -fPIC -Wall -O3 -pthread -std=gnu++11 -o CMakeFiles/FieldBlockMpiDev.dir/field_block.cpp.o -c /home/lyyyylbm/mplb/Tests/FieldBlock/field_block.cpp",
+  "file": "/home/lyyyylbm/mplb/Tests/FieldBlock/field_block.cpp"
+}
+]
