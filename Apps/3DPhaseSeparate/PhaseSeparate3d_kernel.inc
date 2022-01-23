@@ -32,7 +32,7 @@
 #include <random>
 std::random_device rd;
 std::default_random_engine e(rd());
-std::uniform_real_distribution<double> kk(0.1909,0.2209);
+std::uniform_real_distribution<double> kk(0.2009,0.2309);
 #ifndef CAVITY3D_KERNEL_INC
 #define CAVITY3D_KERNEL_INC
 
@@ -43,20 +43,24 @@ void KerSetInitialMacroVars(ACC<Real>& rho, ACC<Real>& u, ACC<Real>& v,
     Real X{coordinates(0,0,0,0)};
     Real Y{coordinates(1,0,0,0)};
     Real Z{coordinates(2,0,0,0)};
-    Real temp =(X-49)*(X-49)+(Y-49)*(Y-49)+(Z-10)*(Z-10);
-    rho(0, 0, 0) = (0.35+0.006) / 2 + tanh(2*(sqrt(temp)-30)/5)*(0.35-0.006)/2;
+    Real temp =(X-49)*(X-49)+(Y-49)*(Y-49)+(Z-5)*(Z-5);
+    rho(0, 0, 0) = (0.32+0.004) / 2 + tanh(2*(sqrt(temp)-30)/5)*(0.32-0.004)/2;
     u(0, 0, 0) = 0;
     v(0, 0, 0) = 0;
     w(0, 0, 0) = 0;
 }
-void KerUpdateBodyForce(ACC<Real>& acceration, const ACC<Real>& Rho, const ACC<Real>& P,
+void KerUpdateBodyForce(ACC<Real>& acceration, ACC<Real>& conacceration,const ACC<Real>& Rho, const ACC<Real>& P,
                         const ACC<Real>& Psi, const ACC<int>& nodeType, const int* lattIdx) {
                 VertexType vt = (VertexType)nodeType(0, 0, 0);
                 if (vt != VertexType::ImmersedSolid) {
                     Real G = -1.0; 
+                    Real Gw = 0.1;
                     Real Fx{0}; 
                     Real Fy{0}; 
                     Real Fz{0};
+                    Real conFx{0}; 
+                    Real conFy{0}; 
+                    Real conFz{0};
                     if (P(0, 0, 0) - Rho(0, 0, 0) / CS / CS > 0) G = 1.0;
                     for (int xiIndex = lattIdx[0]; xiIndex <= lattIdx[1]; xiIndex++) {
                          Real cx = XI[xiIndex * LATTDIM];
@@ -71,14 +75,23 @@ void KerUpdateBodyForce(ACC<Real>& acceration, const ACC<Real>& Rho, const ACC<R
                          Fx += cx * Psi(0, 0, 0) * WEIGHTS[xiIndex];
                          Fy += cy * Psi(0, 0, 0) * WEIGHTS[xiIndex];
                          Fz += cz * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         conFx += cx * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         conFy += cy * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         conFz += cz * Psi(0, 0, 0) * WEIGHTS[xiIndex];
                          }
                     }
                          Fx *= -G * Psi(0, 0, 0);
                          Fy *= -G * Psi(0, 0, 0);
                          Fz *= -G * Psi(0, 0, 0);
+                         conFx *= -Gw * Psi(0, 0, 0);
+                         conFy *= -Gw * Psi(0, 0, 0);
+                         conFz *= -Gw * Psi(0, 0, 0);
                          acceration(0,0,0,0) = Fx;
                          acceration(1,0,0,0) = Fy;
                          acceration(2,0,0,0) = Fz;
+                         conacceration(0,0,0,0) = conFx;
+                         conacceration(1,0,0,0) = conFy;
+                         conacceration(2,0,0,0) = conFz;
                 }
 }
 

@@ -62,8 +62,8 @@ static inline OPS_FUN_PREFIX Real CalcBGKFeqpseudo3D(const int l, const Real rho
              XI[l * LATTDIM + 2] * g[2])};
     Real uF{(u * g[0] + v * g[1] +
              w * g[2])};
-    Real B = 1.0;
-    Real C = 1.0;
+    Real B = 1.0-0.5/tau;
+    Real C = 1.0-0.5/tau;
     Real res = B*cF*CS*CS + C* (cF*cu*CS*CS*CS*CS - uF*CS*CS);
     return WEIGHTS[l] * res;
 }

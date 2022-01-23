@@ -60,7 +60,7 @@ RealFieldGroup& g_MacroVars();
 RealFieldGroup& g_MacroVarsCopy();
 
 RealFieldGroup& g_MacroBodyforce();
-
+RealFieldGroup& g_ContactBodyforce();
 RealField& g_CoordinateXYZ();
 IntFieldGroup& g_NodeType();
 IntField& g_GeometryProperty();

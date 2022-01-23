@@ -75,6 +75,7 @@ std::map<int, ops_reduction>& g_ResidualErrorHandle() {
 };
 
 RealFieldGroup MacroBodyforce;
+RealFieldGroup ContactBodyforce;
 const BlockGroup& g_Block() { return BLOCKS; };
 RealField& g_P() { return p; };
 RealField& g_Psi() { return psi; };
@@ -85,6 +86,7 @@ RealField& g_mStage() { return mStage; };
 RealFieldGroup& g_MacroVars() { return MacroVars; };
 RealFieldGroup& g_MacroVarsCopy() { return MacroVarsCopy; };
 RealFieldGroup& g_MacroBodyforce() { return MacroBodyforce; };
+RealFieldGroup& g_ContactBodyforce() { return ContactBodyforce; };
 /**
  * DT: time step
  */

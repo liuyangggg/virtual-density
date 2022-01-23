@@ -80,6 +80,8 @@ void UpdateMacroscopicBodyForce(const Real time) {
                          block.Get(), SpaceDim(), iterRng.data(),
                          ops_arg_dat(g_MacroBodyforce().at(compo.id).at(blockIdx), SpaceDim(),
                                      LOCALSTENCIL, "Real", OPS_RW),
+                         ops_arg_dat(g_ContactBodyforce().at(compo.id).at(blockIdx), SpaceDim(),
+                                     LOCALSTENCIL, "Real", OPS_RW),
                          ops_arg_dat(g_MacroVars().at(rhoId).at(blockIdx), 1,
                                      LOCALSTENCIL, "Real", OPS_READ),
                          ops_arg_dat(g_P().at(blockIdx), 1,

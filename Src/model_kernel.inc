@@ -382,7 +382,7 @@ void KerCollideBGKIsothermal3Dpseudo(ACC<Real>& fStage, const ACC<Real>& f,
                                const ACC<Real>& coordinates,
                                const ACC<int>& nodeType, const ACC<Real>& Rho,
                                const ACC<Real>& U, const ACC<Real>& V,
-                               const ACC<Real>& W, const ACC<Real>& BodyForce, const Real* tauRef,
+                               const ACC<Real>& W, const ACC<Real>& acceration, const ACC<Real>& conacceration, const Real* tauRef,
                                const Real* dt, const int* lattIdx) {
 #ifdef OPS_3D
     VertexType vt = (VertexType)nodeType(0, 0, 0);
@@ -394,15 +394,21 @@ void KerCollideBGKIsothermal3Dpseudo(ACC<Real>& fStage, const ACC<Real>& f,
         Real u{U(0, 0, 0)};
         Real v{V(0, 0, 0)};
         Real w{W(0, 0, 0)};
-        Real u1{u + BodyForce(0,0,0,0) / rho};
-        Real v1{v + BodyForce(1,0,0,0) / rho};
-        Real w1{w + BodyForce(2,0,0,0) / rho};
+        Real g[]{acceration(0, 0, 0, 0), acceration(1, 0, 0, 0),
+                 acceration(2, 0, 0, 0)};
+        Real cong[]{conacceration(0, 0, 0, 0), conacceration(1, 0, 0, 0),
+                 conacceration(2, 0, 0, 0)};
+        Real gplus[]{g[0]+cong[0], g[1]+cong[1],
+                 g[2]+cong[2]};         
+        Real u1{u + 0.5*gplus[0] / rho};
+        Real v1{v + 0.5*gplus[1] / rho};
+        Real w1{w + 0.5*gplus[2] / rho};
         const Real T{1};
         const int polyOrder{2};
         Real tau = (*tauRef);
         Real dtOvertauPlusdt = (*dt) / tau;
         for (int xiIndex = lattIdx[0]; xiIndex <= lattIdx[1]; xiIndex++) {
-            const Real feq{CalcBGKBodyForce(xiIndex, rho, u, v, w, T, polyOrder)};
+            const Real feq{CalcBGKBodyForce(xiIndex, rho, u1, v1, w1, T, polyOrder)};
             if (vt == VertexType::Fluid || vt == VertexType::MDPeriodic || vt == VertexType::Wall) {
                 fStage(xiIndex, 0, 0, 0) =
                     feq + (1 - dtOvertauPlusdt) * (f(xiIndex, 0, 0, 0) - feq) + fStage(xiIndex, 0, 0, 0);
@@ -569,8 +575,8 @@ void KerCollideBGKThermal3D(ACC<Real>& fStage, const ACC<Real>& f,
 #endif  // OPS_3D
 }
 
-void KerCalcBodyForce1ST3D(ACC<Real>& fStage, const ACC<Real>& acceration,const ACC<Real>& Rho,
-                           const ACC<Real>& U, const ACC<Real>& V, const ACC<Real>& W, 
+void KerCalcBodyForce1ST3D(ACC<Real>& fStage, const ACC<Real>& acceration, const ACC<Real>& conacceration, const ACC<Real>& Psi,
+                           const ACC<Real>& Rho,const ACC<Real>& U, const ACC<Real>& V, const ACC<Real>& W, 
                            const ACC<int>& nodeType, const Real* tauRef, const int* lattIdx) {
 #ifdef OPS_3D
 
@@ -579,15 +585,24 @@ void KerCalcBodyForce1ST3D(ACC<Real>& fStage, const ACC<Real>& acceration,const 
         Real u{U(0, 0, 0)};
         Real v{V(0, 0, 0)};
         Real w{W(0, 0, 0)};
+        Real tau{*tauRef};
         Real g[]{acceration(0, 0, 0, 0), acceration(1, 0, 0, 0),
                  acceration(2, 0, 0, 0)};
-        Real u1 = u + g[0] / Rho(0,0,0);
-        Real v1 = v + g[1] / Rho(0,0,0);
-        Real w1 = w + g[2] / Rho(0,0,0);
+        Real cong[]{conacceration(0, 0, 0, 0), conacceration(1, 0, 0, 0),
+                 conacceration(2, 0, 0, 0)};
+        Real gplus[]{g[0]+cong[0], g[1]+cong[1],
+                 g[2]+cong[2]};
+        Real u1 = u + 0.5*gplus[0] / Rho(0,0,0);
+        Real v1 = v + 0.5*gplus[1] / Rho(0,0,0);
+        Real w1 = w + 0.5*gplus[2] / Rho(0,0,0);
+        Real sigma = 0.105;
+        Real u2 = u1 + sigma*g[0] / Psi(0,0,0) / Psi(0,0,0) / (tau-0.5);
+        Real v2 = v1 + sigma*g[1] / Psi(0,0,0) / Psi(0,0,0) / (tau-0.5);
+        Real w2 = w1 + sigma*g[2] / Psi(0,0,0) / Psi(0,0,0) / (tau-0.5);
         for (int xiIndex = lattIdx[0]; xiIndex <= lattIdx[1]; xiIndex++) {
-            const Real feq{CalcBGKBodyForce(xiIndex, Rho(0,0,0), u, v, w, 1, 2)};
-            const Real feq1{CalcBGKBodyForce(xiIndex, Rho(0,0,0), u1, v1, w1, 1, 2)};
-        Real bodyForce = feq1-feq;
+            //const Real feq{CalcBGKFeqpseudo3D(xiIndex, Rho(0,0,0), u, v, w, gplus, 2)};
+            const Real feq1{CalcBGKFeqpseudo3D(xiIndex, Rho(0,0,0), u2, v2, w2, gplus, tau)};
+        Real bodyForce = feq1;
 #ifdef CPU
             if (isnan(bodyForce) || isinf(bodyForce)) {
                 ops_printf(
@@ -646,7 +661,7 @@ void KerCalcP3D(ACC<Real>& P, const ACC<int>& nodeType,
         Real a = 1.0;
         Real b = 4.0;
         Real R = 1.0;
-        Real T = 0.7*0.3773*a/(b*R);
+        Real T = 0.75*0.3773*a/(b*R);
         Real temp = b * Rho(0,0,0) / 4.0;
         p = Rho(0,0,0) * R * T * (1.0 + temp + temp * temp - temp * temp * temp) / (1 - temp) / (1 - temp) / (1 - temp) - a * Rho(0,0,0) * Rho(0,0,0);
 #ifdef CPU

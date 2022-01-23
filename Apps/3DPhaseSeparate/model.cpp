@@ -517,6 +517,8 @@ void DefineBodyForce(std::vector<BodyForceType> types,
         components.at(compoId.at(idx)).bodyForceType = types.at(idx);
         RealField force{"Force_" + components.at(compoId.at(idx)).name};
         g_MacroBodyforce().emplace(compoId.at(idx), force);
+        RealField contactforce{"ContactForce_" + components.at(compoId.at(idx)).name};
+        g_ContactBodyforce().emplace(compoId.at(idx), contactforce);
     }
     if (compoSize < NUMCOMPONENTS) {
         ops_printf(
@@ -525,6 +527,10 @@ void DefineBodyForce(std::vector<BodyForceType> types,
             "pre-defined body force terms!\n");
     }
     for (auto& pair : g_MacroBodyforce()) {
+        pair.second.SetDataDim(SpaceDim());
+        pair.second.CreateFieldFromScratch(g_Block());
+    }
+    for (auto& pair : g_ContactBodyforce()) {
         pair.second.SetDataDim(SpaceDim());
         pair.second.CreateFieldFromScratch(g_Block());
     }
