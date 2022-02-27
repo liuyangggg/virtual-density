@@ -221,5 +221,5 @@
   "TimeStepsToRun": 10000,
   "CurrentTimeStep": 0,
   "ConvergenceCriteria": 1e-12,
-  "CheckPeriod": 500
-} 
+  "CheckPeriod": 100
+}

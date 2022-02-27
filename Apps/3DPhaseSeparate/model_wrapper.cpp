@@ -152,17 +152,20 @@ void UpdatePsi3D() {
                             iterRng.data(),
                             ops_arg_dat(g_Psi().at(blockIndex),
                                         1, LOCALSTENCIL, "double", OPS_RW),
+                            ops_arg_dat(g_PsiSolid().at(blockIndex),
+                                        1, LOCALSTENCIL, "double", OPS_RW),
                             ops_arg_dat(
                                 g_MacroVars()
                                     .at(compo.macroVars.at(Variable_Rho).id)
                                     .at(blockIndex), 
-                                1, LOCALSTENCIL, "double", OPS_READ),
+                                1, ONEPTLATTICESTENCIL, "double", OPS_READ),
                             ops_arg_dat(
                                 g_NodeType().at(compo.id).at(blockIndex), 1,
                                 LOCALSTENCIL, "int", OPS_READ),
                             ops_arg_dat(
                                 g_P().at(blockIndex),
-                                1, LOCALSTENCIL, "double", OPS_READ));        
+                                1, LOCALSTENCIL, "double", OPS_READ),
+                            ops_arg_gbl(compo.index, 2, "int", OPS_READ));        
     
 }
     }

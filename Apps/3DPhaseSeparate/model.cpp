@@ -349,6 +349,8 @@ void DefineComponents(const std::vector<std::string>& compoNames,
     g_P().CreateFieldFromScratch(g_Block());
     g_Psi().CreateFieldFromScratch(g_Block());
     g_Psi().CreateHalos();
+    g_PsiSolid().CreateFieldFromScratch(g_Block());
+    g_PsiSolid().CreateHalos();
 }
 
 void DefineMacroVars(std::vector<VariableTypes> types,

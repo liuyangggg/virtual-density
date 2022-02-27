@@ -44,17 +44,18 @@ void KerSetInitialMacroVars(ACC<Real>& rho, ACC<Real>& u, ACC<Real>& v,
     Real Y{coordinates(1,0,0,0)};
     Real Z{coordinates(2,0,0,0)};
     Real temp =(X-49)*(X-49)+(Y-49)*(Y-49)+(Z-5)*(Z-5);
-    rho(0, 0, 0) = (0.32+0.004) / 2 + tanh(2*(sqrt(temp)-30)/5)*(0.32-0.004)/2;
+    rho(0, 0, 0) = (0.35+0.005) / 2 + tanh(2*(sqrt(temp)-30)/5)*(0.35-0.005)/2;
     u(0, 0, 0) = 0;
     v(0, 0, 0) = 0;
     w(0, 0, 0) = 0;
 }
 void KerUpdateBodyForce(ACC<Real>& acceration, ACC<Real>& conacceration,const ACC<Real>& Rho, const ACC<Real>& P,
-                        const ACC<Real>& Psi, const ACC<int>& nodeType, const int* lattIdx) {
+                        const ACC<Real>& Psi, const ACC<Real>& PsiSolid, const ACC<int>& nodeType, const int* lattIdx) {
                 VertexType vt = (VertexType)nodeType(0, 0, 0);
                 if (vt != VertexType::ImmersedSolid) {
                     Real G = -1.0; 
-                    Real Gw = 0.1;
+                    Real Gw = 0.0;
+                    Real psi{0};
                     Real Fx{0}; 
                     Real Fy{0}; 
                     Real Fz{0};
@@ -72,20 +73,20 @@ void KerUpdateBodyForce(ACC<Real>& acceration, ACC<Real>& conacceration,const AC
                          Fy += cy * Psi(cx, cy, cz) * WEIGHTS[xiIndex];
                          Fz += cz * Psi(cx, cy, cz) * WEIGHTS[xiIndex];
                          } else {
-                         Fx += cx * Psi(0, 0, 0) * WEIGHTS[xiIndex];
-                         Fy += cy * Psi(0, 0, 0) * WEIGHTS[xiIndex];
-                         Fz += cz * Psi(0, 0, 0) * WEIGHTS[xiIndex];
-                         conFx += cx * Psi(0, 0, 0) * WEIGHTS[xiIndex];
-                         conFy += cy * Psi(0, 0, 0) * WEIGHTS[xiIndex];
-                         conFz += cz * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         //Fx += cx * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         //Fy += cy * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         //Fz += cz * Psi(0, 0, 0) * WEIGHTS[xiIndex];
+                         conFx += cx * PsiSolid(0, 0, 0) * WEIGHTS[xiIndex];
+                         conFy += cy * PsiSolid(0, 0, 0) * WEIGHTS[xiIndex];
+                         conFz += cz * PsiSolid(0, 0, 0) * WEIGHTS[xiIndex];
                          }
                     }
                          Fx *= -G * Psi(0, 0, 0);
                          Fy *= -G * Psi(0, 0, 0);
                          Fz *= -G * Psi(0, 0, 0);
-                         conFx *= -Gw * Psi(0, 0, 0);
-                         conFy *= -Gw * Psi(0, 0, 0);
-                         conFz *= -Gw * Psi(0, 0, 0);
+                         conFx *= -G * Psi(0, 0, 0);
+                         conFy *= -G * Psi(0, 0, 0);
+                         conFz *= -G * Psi(0, 0, 0);
                          acceration(0,0,0,0) = Fx;
                          acceration(1,0,0,0) = Fy;
                          acceration(2,0,0,0) = Fz;
@@ -94,5 +95,5 @@ void KerUpdateBodyForce(ACC<Real>& acceration, ACC<Real>& conacceration,const AC
                          conacceration(2,0,0,0) = conFz;
                 }
 }
-
+                        
 #endif // CAVITY3D_KERNEL_INC

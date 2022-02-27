@@ -56,6 +56,7 @@ RealField& g_fStage();
 RealField& g_mStage();
 RealField& g_P();
 RealField& g_Psi();
+RealField& g_PsiSolid();
 RealFieldGroup& g_MacroVars();
 RealFieldGroup& g_MacroVarsCopy();
 

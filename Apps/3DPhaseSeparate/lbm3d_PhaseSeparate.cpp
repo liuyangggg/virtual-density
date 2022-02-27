@@ -87,6 +87,8 @@ void UpdateMacroscopicBodyForce(const Real time) {
                          ops_arg_dat(g_P().at(blockIdx), 1,
                                      LOCALSTENCIL, "Real", OPS_READ),
                          ops_arg_dat(g_Psi().at(blockIdx), 1,
+                                     ONEPTLATTICESTENCIL, "Real", OPS_READ),
+                         ops_arg_dat(g_PsiSolid().at(blockIdx), 1,
                                      ONEPTLATTICESTENCIL, "Real", OPS_READ),            
                          ops_arg_dat(g_NodeType().at(compo.id).at(blockIdx), 1,
                                      ONEPTLATTICESTENCIL, "Real", OPS_READ),
